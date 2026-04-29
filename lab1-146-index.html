@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>美丽校园-春华</title>
+    <style>
+        .img-container{
+            width:220px;
+            height:220px;
+            margin-left:50px;
+            float:left;
+            margin-right:20px;
+            margin-bottom:20px;
+        }
+        .img-container img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .clearfix::after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.一级标题：页面主题 -->
+    <h1>美丽校园-春华</h1>
+    <!-- 2.二级标题：作者信息 -->
+    <h2>作者：宿可君 计算机与人工智能学院</h2>
+    <!-- 水平线分割 -->
+     <hr>
+     <!-- 锚点导航：跳转到对应h3 -->
+      <p>
+        <a href="#nature">跳转到 [自然风光] </a> &nbsp;&nbsp;
+        <a href="#culture">跳转到 [人文景观] </a>
+      </p>
+      <hr>
+      <!-- 3.三级标题：自然风光 （设置id作为锚点）-->
+       <h3 id="nature">"自然风光"</h3>
+       <!-- 4.散文体介绍 （每段>300字，换行分段）-->
+        <p>
+            当春风拂过鲁东大学的校门，每一寸土地都被染上了温柔的生机。从南门踏入校园，首先映入眼帘的是主干道两侧的法桐，经过整个冬天的蛰伏，枝桠上悄悄冒出嫩黄的新芽，在阳光下泛着细碎的光。沿着主干道向北走，图书馆前的樱花大道是春日里最动人的风景，粉白的花朵缀满枝头，风一吹就下起了浪漫的樱花雨。正所谓：“落红不是无情物，化作春泥更护花”。
+            <br><br>
+            逸夫楼前的人工湖是校园里的“小江南”，湖面波光粼粼，倒映着岸边的垂柳与蓝天，柳条抽出嫩绿的枝条，随风轻摆，拂过水面，惊起一圈圈涟漪。湖边的石凳上，总有捧着书本的同学，伴着鸟鸣与湖风，沉浸在知识的世界里。
+            <br><br>
+            午后的阳光穿过教学楼的玻璃窗，撒在自习室的课桌上，也洒在校园的每一个角落。体育场旁边的玉兰花悄然盛放，洁白的花朵亭亭玉立，在蓝天的映衬下格外圣洁；实验楼后面的海棠花花团锦簇，粉艳艳的花瓣簇拥在一起，热闹的像一场春日的盛会。
+        </p>
+        <hr>
+        <!-- 5.三级标题：人文景观（设置id作为锚点）-->
+         <h3 id="cilture">人文景观</h3>
+         <!-- 6.无序列表：至少三个名称 -->
+          <ul>
+            <li>鲁东大学图书馆</li>
+            <li>逸夫教学楼</li>
+            <li>人工湖与樱花大道</li>
+            <li>校史馆与文化广场</li>
+          </ul>
+          <!-- 7.图片容器：div包裹img，220px*220px,左留白50px,横排 -->
+           <div class="img-clearfix">
+            <div class="img-container">
+                <img src="campus1.jpg>" alt="鲁东大学樱花大道">
+            </div>
+            <div class="img-container">
+                <img src="campus2.jpg" alt="鲁东大学图书馆">
+            </div>
+            <div class="img-container">
+                <img src="campus3.jpg" alt="鲁东大学人工湖">
+            </div>
+           </div>
+</body>
+</html>
