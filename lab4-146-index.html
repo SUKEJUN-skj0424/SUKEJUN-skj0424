@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>数字展销平台首页-春韵</title>
+    <link rel="stylesheet" href="css/lab4-班号-学号后3位-index.css">
+</head>
+<body>
+    <!-- 登录/注册对话框（父相子绝，默认隐藏） -->
+    <div class="login-modal" id="loginModal">
+        <div class="modal-content">
+            <!-- 登录表单 -->
+            <div class="login-form" id="loginForm">
+                <h2>用户登录</h2>
+                <input type="text" id="loginUsername" placeholder="请输入用户名">
+                <input type="password" id="loginPassword" placeholder="请输入密码">
+                <button onclick="login()" class="login-btn">登录</button>
+                <p>没有账号？立即注册</p >
+            </div>
+            <!-- 注册表单（默认隐藏） -->
+            <div class="register-form" id="registerForm">
+                <h2>用户注册</h2>
+                <input type="text" id="regUsername" placeholder="请输入用户名">
+                <input type="password" id="regPassword" placeholder="请输入密码">
+                <button onclick="register()">注册</button>
+                <p>已有账号？立即登录</p >
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部：Logo + 导航（固定+浮动） -->
+    <header class="header">
+        <div class="logo">
+            < img src="img/logo.png" alt="网站Logo">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>首页</li>
+                <li>图书分类</li>
+                <li>热门推荐</li>
+                <li>新书上市</li>
+                <li>关于我们</li>
+                <li>登录/注册</li>
+                <!-- 新增图标：购物车 + 搜索 -->
+                <li class="icon-item cart-icon">🛒</li>
+                <li class="icon-item search-icon">🔍</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 新增：轮播图区域 -->
+    <section class="banner">
+        <div class="banner-container">
+            < img src="img/banner1.jpg" alt="轮播图1" class="banner-img">
+            < img src="img/banner2.jpg" alt="轮播图2" class="banner-img">
+            < img src="img/banner3.jpg" alt="轮播图3" class="banner-img">
+        </div>
+    </section>
+
+    <!-- 主体：三栏浮动布局 -->
+    <main class="container">
+        <!-- 左栏：分类导航（相对定位） -->
+        <aside class="sidebar left-sidebar">
+            <h3>图书分类导航</h3>
+            <ul class="category-list">
+                <li>计算机/IT</li>
+                <li>文学小说</li>
+                <li>社科人文</li>
+                <li>经管职场</li>
+                <li>少儿读物</li>
+            </ul>
+        </aside>
+
+        <!-- 中间栏：内容区 -->
+        <section class="main-content">
+            <!-- 图书展示区 -->
+            <div class="book-section">
+                <h2>图书展示区</h2>
+                <div class="book-grid">
+                    <div class="book-card hover-card">
+                        <div class="book-img">
+                            < img src="img/book1.jpg" alt="图书封面">
+                        </div>
+                        <div class="book-info">
+                            <h4>《HTML+CSS实战》</h4>
+                            <p class="price">¥29.90</p >
+                        </div>
+                        <div class="book-hover-layer">
+                            <p>立即购买</p >
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        < img src="img/book2.jpg" alt="图书封面">
+                        <div class="book-info">
+                            <h4>《JavaScript进阶》</h4>
+                            <p class="price">¥32.90</p >
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        < img src="img/book3.jpg" alt="图书封面">
+                        <div class="book-info">
+                            <h4>《Web前端开发》</h4>
+                            <p class="price">¥9.90</p >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 热门推荐（加了悬移动+放大+加深阴影） -->
+            <div class="book-section">
+                <h2>热门推荐</h2>
+                <div class="book-grid hot-grid">
+                    <div class="book-card hot-book">
+                        < img src="img/book1.jpg" alt="">
+                        <div class="book-info"><h4>热门书1</h4></div>
+                    </div>
+                    <div class="book-card hot-book">
+                        < img src="img/book1.jpg" alt="">
+                        <div class="book-info"><h4>热门书2</h4></div>
+                    </div>
+                    <div class="book-card hot-book">
+                        < img src="img/book1.jpg" alt="">
+                        <div class="book-info"><h4>热门书3</h4></div>
+                    </div>
+                    <div class="book-card hot-book">
+                        < img src="img/book1.jpg" alt="">
+                        <div class="book-info"><h4>热门书4</h4></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新书上市：Table布局 -->
+            <div class="book-section">
+                <h2>新书上市</h2>
+                <table class="new-book-table">
+                    <thead>
+                        <tr>
+                            <th>封面</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>定价</th>
+                            <th>上架时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>< img src="img/book1.jpg" alt="新书"></td>
+                            <td>《前端入门到精通》</td>
+                            <td>张三</td>
+                            <td>¥49.90</td>
+                            <td>2026-04-15</td>
+                        </tr>
+                        <tr>
+                            <td>< img src="img/book2.jpg" alt="新书"></td>
+                            <td>《后端开发实践》</td>
+                            <td>李四</td>
+                            <td>¥55.90</td>
+                            <td>2026-04-15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 右栏：促销信息（固定定位） -->
+        <aside class="sidebar right-sidebar">
+            <div class="ad-box">
+                <h3>促销信息</h3>
+                < img src="img/ad.jpg" alt="促销广告">
+                <p class="ad-text">全场满100减30！</p >
+            </div>
+        </aside>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>数字展销平台 2026 春韵</p >
+    </footer>
+
+    <!-- 登录/注册JS逻辑 -->
+    <script>
+        function showModal() {
+            document.getElementById('loginModal').style.display = 'flex';
+        }
+        window.onclick = function(e) {
+            const modal = document.getElementById('loginModal');
+            if (e.target === modal) modal.style.display = 'none';
+        }
+        function showRegister() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+        }
+        function showLogin() {
+            document.getElementById('registerForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        }
+        function register() {
+            const username = document.getElementById('regUsername').value.trim();
+            const password = document.getElementById('regPassword').value.trim();
+            if (!username || !password) {
+                alert('用户名和密码不能为空！');
+                return;
+            }
+            if (localStorage.getItem(username)) {
+                alert('该用户名已注册！');
+                return;
+            }
+            localStorage.setItem(username, password);
+            alert('注册成功！请登录');
+            showLogin();
+        }
+        function login() {
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+            if (!username || !password) {
+                alert('用户名和密码不能为空！');
+                return;
+            }
+            const storedPwd = localStorage.getItem(username);
+            if (storedPwd && storedPwd === password) {
+                alert('登录成功！');
+                document.getElementById('loginModal').style.display = 'none';
+            } else {
+                alert('用户名或密码错误！');
+            }
+        }
+    </script>
+</body>
+</html>
